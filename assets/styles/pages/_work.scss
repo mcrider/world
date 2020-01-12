@@ -1,0 +1,105 @@
+.page-work {
+  padding-top: 13px;
+
+  @include grid-media($grid-medium) {
+    padding-top: 36px;
+  }
+
+  @include grid-media($grid-large) {
+    padding-top: 20px;
+  }
+
+  section.intro {
+    margin-bottom: 0;
+  }
+
+  h2.heading {
+    @extend .fs-h-11;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateY(30%);
+    z-index: -1;
+    width: 80%;
+
+    @include grid-media($grid-small) {
+      width: 65%;
+    }
+
+    @include grid-media($grid-medium) {
+      width: 90%;
+    }
+
+    @include grid-media($grid-large) {
+      max-width: 1000px;
+    }
+  }
+
+  section.case-studies {
+    margin-bottom: 0;
+  }
+
+  .case-study-module {
+    width: 100%;
+
+    @include grid-media($grid-medium) {
+      margin-bottom: 93px;
+    }
+
+    @include grid-media($grid-large) {
+      margin-bottom: 123px;
+    }
+
+    .outer {
+      @include clearfix;
+    }
+
+    .image-container {
+      @include gridWidths(4, 4, 4);
+      @include grid-push(1);
+      margin-bottom: 25px;
+
+      @include grid-media($grid-medium) {
+        @include grid-push(4);
+        margin-bottom: 36px;
+      }
+
+      @include grid-media($grid-large) {
+        @include grid-push(4);
+        margin-bottom: 48px;
+      }
+
+      a {
+        width: 100%;
+        position: relative;
+      }
+
+      a img {
+        position: absolute;
+        height: 100%; width: 100%;
+      }
+    }
+
+    .outer-container {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .work-cta-separator {
+    float: none;
+    margin-top: 0;
+    margin-bottom: 28px;
+
+    @include grid-media($grid-medium) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .call-to-action {
+    margin-bottom: 14px;
+
+    @include grid-media($grid-medium) {
+      margin-bottom: 28px;
+    }
+  }
+}

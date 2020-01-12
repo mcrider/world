@@ -1,0 +1,74 @@
+.footer-separator {
+  margin-bottom: 17px;
+
+  @include grid-media($grid-large) {
+    margin-bottom: 32px;
+  }
+}
+
+footer {
+  @include clearfix;
+
+  @include grid-media($grid-large) {
+    margin-bottom: 43px;
+  }
+
+  .copyright {
+    display: block;
+  }
+
+  .learn-more, .social-links {
+    padding-bottom: 37px;
+    margin-bottom: 12px;
+    background: repeat-x bottom left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='rgb(17, 17, 17)' x='0' y='0' width='1' height='0.5'/></svg>");
+  }
+
+  .learn-more, .social-links, .scroll-up-container {
+    @include grid-media($grid-large) {
+      display: inline-block;
+      width: calc(25% - 6px);
+      padding-bottom: 0;
+      background: none;
+      vertical-align: top;
+    }
+  }
+
+  .learn-more {
+    @include grid-media($grid-large) {
+      width: 50%;
+    }
+
+    p {
+      @extend .fs-h-03;
+      padding-right: 44px;
+      margin-bottom: 7px;
+
+      @include grid-media($grid-large) {
+        padding-right: 50px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .social-links li {
+    @include grid-media($grid-large) {
+      margin-left: 20px;
+    }
+  }
+
+  .social-links li a {
+    text-transform: uppercase;
+  }
+
+  .scroll-up-container {
+    margin-bottom: 62px;
+
+    @include grid-media($grid-large) {
+      text-align: right;
+    }
+  }
+
+  a {
+    @extend .fs-sm-00;
+  }
+}

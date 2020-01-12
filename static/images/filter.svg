@@ -1,0 +1,13 @@
+<svg width="800px" height="600px" viewbox="0 0 800 600">
+    <defs>
+        <filter id="f1" x="0%" y="0%" width="100%" height="100%">
+        <feColorMatrix id="tinter" type="matrix" values=".6 .6 .6 0 0
+                                                            .2 .2 .2 0 0
+                                                            .0 .0 .0 0 0
+                                                             0    0   0 1 0"/>
+        </filter>
+    </defs>
+
+ <image x="0" y="0" width="550" height="370" preserveAspectRatio="true"
+    filter="url(#tinter)" xlink:href="http://www.crossfitwaxahachie.com/wp-content/uploads/2012/04/IMG_0752.jpg"/>
+</svg>

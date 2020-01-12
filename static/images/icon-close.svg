@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Mobile-/-Nav-Dropdown" transform="translate(-342.000000, -11.000000)" stroke="#FFFFFF" stroke-width="1.25">
+            <g id="Group-6-Copy">
+                <g id="Close" transform="translate(343.000000, 12.000000)">
+                    <path d="M0,17.6776695 L17.6776695,0" id="Line"></path>
+                    <path d="M17.6776695,17.6776695 L0,0" id="Line-Copy-5"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

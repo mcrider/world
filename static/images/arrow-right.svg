@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-19958 -21163 33.594 33.594">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #95989a;
+        stroke-width: 4px;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Symbol_4_3" data-name="Symbol 4 – 3" transform="translate(-21188 -23089)">
+    <path id="Path_99" data-name="Path 99" class="cls-1" d="M4546.371,2019.787l7.063,7.063-7.063,7.063" transform="translate(-3302.873 -83.889)"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" class="cls-1" transform="translate(1230 1926)">
+      <circle class="cls-2" cx="16.797" cy="16.797" r="16.797"/>
+      <circle class="cls-3" cx="16.797" cy="16.797" r="14.797"/>
+    </g>
+  </g>
+</svg>

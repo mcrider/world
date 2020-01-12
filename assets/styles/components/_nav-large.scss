@@ -1,0 +1,32 @@
+nav.large {
+  position: absolute;
+  z-index: 3;
+  bottom: 9px; right: 0;
+  display: none;
+
+  @include grid-media($grid-medium) {
+    display: block;
+  }
+
+
+  li {
+    display: inline;
+    margin-left: 34px;
+
+    @media only screen and (max-width: 876px) {
+      margin-left: 24px;
+    }
+
+    @media only screen and (max-width: 820px) {
+      margin-left: 18px;
+    }
+  }
+
+  a {
+    color: $black;
+  }
+
+  li.active a, li:hover a {
+    background: repeat-x bottom left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='rgb(17, 17, 17)' x='0' y='0' width='1' height='0.5'/></svg>");
+  }
+}

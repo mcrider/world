@@ -1,0 +1,9 @@
+.module.body-copy {
+  a {
+    border-bottom: 1px solid $black;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

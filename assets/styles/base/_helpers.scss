@@ -1,0 +1,81 @@
+// Various helper classes
+
+.pull-right {
+  float:right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hide-medium {
+  @include grid-media($grid-medium) {
+    display: none !important;
+  }
+}
+
+.hide-small {
+  display: none !important;
+
+  @include grid-media($grid-medium) {
+    display: block !important;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.grey {
+  color: $grey-1;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.button {
+  border-radius: 0;
+  border: 1px solid $white;
+  padding: 10px 12px 7px 12px;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+img.fit {
+  object-fit: cover;
+}
+
+// Helpers for lazy loading images
+.lazy {
+  opacity: 0;
+  transition: opacity .8s ease-out;
+}
+
+img.lazy {
+  width: 100%; height: auto;
+}
+
+.lazy.loaded, .lazy.error {
+  opacity: 1;
+}
+
+img.lazy:not([src]) {
+  visibility: hidden;
+}
+
+// Fade in text
+.fade-in {
+  opacity: 0;
+  transition: opacity $default-transition-speed $default-transition-easing;
+
+  .first-loaded & {
+    opacity: 1;
+  }
+}

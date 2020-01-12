@@ -1,0 +1,53 @@
+// Font Stacks -- Fonts come from typography.com external CSS
+// $chronicle-display: "Chronicle Display A", verdana, serif;
+// $chronicle-screensmart: "Chronicle SSm A", arial, sans-serif;
+$helvetica: "HelveticaNeue", helvetica, arial, sans-serif;
+// $helvetica: "Neue Helvetica Pro 55 Roman", helvetica, arial, sans-serif;
+
+// Font Sizes
+$base-font-size: 18px;
+
+// Screen sizes
+$screen-sm-min: 480px;
+$screen-md-min: 768px;
+$screen-lg-break: 1200px;
+$screen-lg-min: 1440px; // Grid width
+
+
+// Other sizes
+$base-padding: 18px;
+$base-padding-medium: 24px;
+$base-padding-large: 32px;
+$header-height: 52px;
+$header-height-large: 90px;
+$module-margin-bottom: 36px;
+$module-margin-bottom-large: 64px;
+$column: (100% / 6);
+$column-large: (100% / 12);
+
+// Padding from top of page to content
+$padding-top-about: 74px; // Same for news, contact
+$padding-top-about-large: 189px;
+$padding-top-people: 74px;
+$padding-top-people-large: 208px;
+$padding-top-news: 45px;
+$padding-top-news-large: 71px;
+
+
+// Colors
+$grey-1: #C8C8C8;
+$grey-2: #BFBFBF;
+$grey-3: #111111;
+$grey-4: #666666;
+$grey-5: #999999;
+$white: #ffffff;
+$black: $grey-3;
+$yellow-1: #F8DE1C;
+$blue-1: #1E4DB7;
+$red-1: #ff0000;
+$error-red: #FF6461;
+
+
+// Transitions
+$default-transition-speed: .3s;
+$default-transition-easing: ease-in;

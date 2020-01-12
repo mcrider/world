@@ -1,0 +1,22 @@
+$neat-grid: (
+  columns: 6,
+  gutter: $base-padding
+);
+
+$grid-small: (
+  columns: 6,
+  gutter: $base-padding,
+  media: "(min-width: #{$screen-sm-min})"
+);
+
+$grid-medium: (
+  columns: 12,
+  gutter: $base-padding-medium,
+  media: "(min-width: #{$screen-md-min})"
+);
+
+$grid-large: (
+  columns: 12,
+  gutter: $base-padding-large,
+  media: "(min-width: #{$screen-lg-break})"
+);

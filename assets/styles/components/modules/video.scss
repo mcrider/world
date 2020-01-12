@@ -1,0 +1,55 @@
+.module.video-embed, .module.video-file {
+  &.size-full.caption-below .video-container {
+    margin-bottom: 36px;
+
+    @include grid-media($grid-large) {
+      margin-bottom: 64px;
+    }
+  }
+
+  .video-container {
+    width: 100%; height: auto;
+    // padding-bottom: 56.25%;
+    position: relative;
+    margin-bottom: 22px;
+
+    > * {
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+    }
+
+    video {
+      display: flex;
+    }
+  }
+
+  .video-container .poster {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    width: calc(100% + 1px);
+
+    &:after {
+      content: 'PLAY';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font: 400 40px/50px $helvetica;
+      color: $white;
+
+      @include grid-media($grid-medium) {
+        font-size: 80px;
+      }
+    }
+  }
+}
+
+.module.video-embed {
+  .video-container {
+    padding-bottom: 56.25%;
+
+    > * {
+      position: absolute;
+    }
+  }
+}

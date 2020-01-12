@@ -1,0 +1,86 @@
+.module.quote {
+  @extend .container;
+  text-align: center;
+
+  &.left {
+    text-align: left;
+
+    p.quote-text {
+      text-indent: -.4em;
+      // hanging-punctuation: first;
+    }
+  }
+
+  &.right {
+    text-align: right;
+
+    p.quote-text {
+      hanging-punctuation: last;
+    }
+  }
+
+  &.no-dangle.left p.quote-text {
+    text-indent: 0;
+  }
+
+  .module-contents {
+    padding-left: 2.2%;
+
+    @include grid-media($grid-medium) {
+      padding-left: 2%;
+    }
+
+    &.indent-1 {
+      width: $column * 5;
+      margin-left: $column / 2;
+
+      @include grid-media($grid-medium) {
+        width: $column-large * 10;
+        margin-left: $column-large;
+      }
+    }
+
+    &.indent-2 {
+      width: $column * 4;
+      margin-left: $column;
+
+      @include grid-media($grid-medium) {
+        width: $column-large * 8;
+        margin-left: $column-large * 2;
+      }
+    }
+
+    &.indent-3 {
+      width: $column * 3;
+      margin-left: $column * 1.5;
+
+      @include grid-media($grid-medium) {
+        width: $column-large * 6;
+        margin-left: $column-large * 3;
+      }
+    }
+
+    &.indent-4 {
+      width: $column * 2;
+      margin-left: $column * 2;
+
+      @include grid-media($grid-medium) {
+        width: $column-large * 4;
+        margin-left: $column-large *4;
+      }
+    }
+  }
+
+  .quote-text {
+    margin: 0 auto 18px auto;
+  }
+
+  .quote-attribution {
+    @extend .fs-h-00;
+    margin-bottom: 3px;
+  }
+
+  .quote-attribution-title {
+    @extend .fs-h-03;
+  }
+}

@@ -1,0 +1,230 @@
+.call-to-action {
+  margin-bottom: $module-margin-bottom;
+
+  @include grid-media($grid-large) {
+    margin-bottom: $module-margin-bottom-large;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  .cta-link {
+    @extend .fs-sm-00;
+  }
+
+  p.indent-1 {
+    width: $column * 5;
+    margin-left: $column / 2;
+
+    @include grid-media($grid-medium) {
+      width: $column-large * 10;
+      margin-left: $column-large;
+    }
+  }
+
+  p.indent-2 {
+    width: $column * 4;
+    margin-left: $column;
+
+    @include grid-media($grid-medium) {
+      width: $column-large * 8;
+      margin-left: $column-large * 2;
+    }
+  }
+
+  p.indent-3 {
+    width: $column * 3;
+    margin-left: $column * 1.5;
+
+    @include grid-media($grid-medium) {
+      width: $column-large * 6;
+      margin-left: $column-large * 3;
+    }
+  }
+
+  p.indent-4 {
+    width: $column * 2;
+    margin-left: $column * 2;
+
+    @include grid-media($grid-medium) {
+      width: $column-large * 4;
+      margin-left: $column-large *4;
+    }
+  }
+}
+
+
+//
+// Two text blocks above and below an image
+//
+.call-to-action.image-middle {
+  text-align: center;
+
+  @include grid-media($grid-medium) {
+    padding-top: 7px;
+  }
+
+  p.top {
+    margin-bottom: 11px;
+
+    @include grid-media($grid-large) {
+      margin-bottom: 7px;
+    }
+  }
+
+  p.bottom {
+    margin-bottom: 6px;
+
+    @include grid-media($grid-medium) {
+      margin-bottom: 9px;
+    }
+  }
+
+  img {
+    margin-bottom: 11px;
+
+    @include grid-media($grid-medium) {
+      margin-bottom: 37px;
+    }
+  }
+}
+
+//
+// Image of various sizes sits on top of text
+//
+.call-to-action.floating {
+  position: relative;
+  text-align: center;
+
+  @include grid-media($grid-medium) {
+    margin-bottom: 45px;
+  }
+
+  &.pad {
+    padding-left: $base-padding;
+    padding-right: $base-padding;
+
+    @include grid-media($grid-medium) {
+      padding-left: $base-padding-medium;
+      padding-right: $base-padding-medium;
+    }
+
+    @include grid-media($grid-large) {
+      padding-left: $base-padding-large;
+      padding-right: $base-padding-large;
+    }
+  }
+
+  .container.text {
+    position: relative;
+  }
+
+  p.top {
+    margin-bottom: 8px;
+  }
+}
+
+//
+// Five item image galery with text in the middle
+//
+.call-to-action.gallery {
+  position: relative;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .images-container {
+    &.top .bg-container {
+      @include gridWidths(3, 6, 6);
+    }
+
+    &.bottom .bg-container {
+      @include gridWidths(2, 4, 4);
+    }
+
+    .bg {
+      width: 100%;
+      padding-bottom: 120%;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+  .text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+}
+
+
+//
+// Superhero-style banner image with text in the middle
+//
+.call-to-action.superhero {
+  .bg-container {
+    position: relative;
+  }
+
+  .bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .bg-container img {
+    display: block;
+  }
+
+  .text-container {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .main-text {
+      display: block;
+    }
+
+    a.main-text {
+      margin-bottom: 10px;
+
+      @include grid-media($grid-medium) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .main-text {
+    &:hover {
+      border: 0;
+    }
+  }
+}
+
+//
+// Superhero-style banner image with text in the middle
+//
+.call-to-action.image-padded {
+  padding: $base-padding;
+
+  @include grid-media($grid-medium) {
+    padding: $base-padding-medium;
+  }
+
+  @include grid-media($grid-large) {
+    padding: $base-padding-large;
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+

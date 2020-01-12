@@ -1,0 +1,21 @@
+@keyframes grow {
+  0% {
+    // display: none;
+  }
+  1% {
+    // display: block;
+    max-height: 0;
+  }
+  100% {
+    max-height: 1000px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

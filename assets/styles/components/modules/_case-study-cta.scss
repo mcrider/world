@@ -1,0 +1,59 @@
+.case-study-cta {
+  .image-container {
+    @include gridWidths(2, 2, 2);
+    @include grid-push(2);
+    position: relative;
+    margin-bottom: 24px;
+
+    @include grid-media($grid-medium) {
+      @include grid-push(5);
+      margin-bottom: 38px;
+    }
+
+    @include grid-media($grid-large) {
+      @include grid-push(5);
+    }
+  }
+
+  .bg-image {
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    @extend .fs-h-15;
+    top: 50%; left: 50%;
+    color: $red-1;
+    text-align: center;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+  }
+
+  .meta {
+    margin: 0 auto 8px auto;
+    text-align: center;
+    max-width: 443px;
+    padding: 0 45px;
+
+    h2 {
+      margin-bottom: 13px;
+
+      @include grid-media($grid-medium) {
+        margin-bottom: 14px;
+      }
+    }
+
+    h3 {
+      @extend .fs-h-16;
+      margin-bottom: 8px;
+
+      @include grid-media($grid-medium) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .read-more {
+      color: $red-1;
+    }
+  }
+}

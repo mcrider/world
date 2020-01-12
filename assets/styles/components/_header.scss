@@ -1,0 +1,131 @@
+header {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  height: $header-height; width: 100%;
+
+  @media (min-width: $screen-lg-min) {
+    position: absolute;
+    height: $header-height-large;
+    background-color: transparent;
+
+    .contents {
+      position: relative;
+      height: $header-height-large;
+    }
+  }
+
+  .logo-container {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    left: $base-padding; top: 18px;
+    height: 100%; width: 75%;
+    font-weight: 600;
+
+    @include grid-media($grid-medium) {
+      left: $base-padding-medium;
+    }
+
+    @include grid-media($grid-large) {
+      left: $base-padding-large;
+    }
+
+    @media (min-width: $screen-lg-break) {
+      top: calc(50% - 2px);
+      width: 25%;
+      height: auto;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      border: none;
+    }
+
+    .logo {
+      position: absolute;
+      display: block;
+      left: 0; top: 50%;
+      height: #{$header-height - 20px}; width: auto;
+      transform: translateY(-50%);
+      transition: opacity $default-transition-speed $default-transition-easing;
+    }
+
+    .logo-tagline-small-white {
+      opacity: 1;
+
+      @media (min-width: $screen-md-min) {
+        opacity: 0;
+      }
+    }
+
+    .logo-tagline-black {
+      @media (min-width: $screen-md-min) {
+        opacity: 1;
+      }
+    }
+  }
+
+  .menu-toggle-container {
+    position: absolute;
+    z-index: 12;
+    top: 19px; right: $base-padding;
+    height: 100%; width: 50px;
+    cursor: pointer;
+
+    @media (min-width: $screen-md-min) {
+      display: none;
+    }
+
+    div {
+      @extend .fs-sm-00;
+      position: absolute;
+      top: 0; right: 0;
+    }
+
+    .close {
+      opacity: 0;
+    }
+  }
+}
+
+header.active .menu-toggle-container {
+  position: fixed;
+
+  .open {
+    opacity: 0;
+  }
+
+  .close {
+    opacity: 1;
+  }
+}
+
+header.sticky-header {
+  background-color: $white;
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform $default-transition-speed $default-transition-easing;
+
+  nav ul.main-nav {
+    @media (min-width: $screen-md-min) and (max-width: $screen-lg-min - 1) {
+      top: 14px;
+    }
+  }
+
+  &.headroom--not-top.headroom--pinned {
+    transform: translateY(0);
+
+    .logo-container {
+      display: block;
+    }
+  }
+}
+
+header.static-header {
+  position: absolute;
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+  }
+}
