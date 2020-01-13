@@ -63,6 +63,7 @@ class StarterSite extends Timber\Site {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
+		add_action( 'admin_menu', array( $this, 'remove_menu_pages' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'init', array( $this, 'register_menus' ) );
@@ -78,6 +79,7 @@ class StarterSite extends Timber\Site {
 		// the_post_thumbnail('medium_large');    // Medium Large resolution (default 768px x 0px max)
 		// the_post_thumbnail('large');           // Large resolution (default 1024px x 1024px max)
 		// the_post_thumbnail('full');            // Original image resolution (unmodified)
+
 
 		parent::__construct();
 	}
@@ -100,6 +102,20 @@ class StarterSite extends Timber\Site {
 
 	function register_widgets(){
 		require('lib/widgets.php');
+	}
+
+	// Remove some sidebar menus
+	function remove_menu_pages() {
+		// remove_menu_page( 'index.php' );                  //Dashboard
+		remove_menu_page( 'edit.php' );                   //Posts
+		// remove_menu_page( 'upload.php' );                 //Media
+		// remove_menu_page( 'edit.php?post_type=page' );    //Pages
+		// remove_menu_page( 'edit-comments.php' );          //Comments
+		// remove_menu_page( 'themes.php' );                 //Appearance
+		// remove_menu_page( 'plugins.php' );                //Plugins
+		// remove_menu_page( 'users.php' );                  //Users
+		// remove_menu_page( 'tools.php' );                  //Tools
+		// remove_menu_page( 'options-general.php' );        //Settings
 	}
 
 	/** This is where you add some context
