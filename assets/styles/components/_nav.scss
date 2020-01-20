@@ -1,2 +1,12 @@
 nav {
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin-left: .5rem;
+  }
 }

@@ -196,6 +196,9 @@ img.lazy:not([src]) {
   font-weight: 400;
   src: url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.eot?") format("eot"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.otf") format("opentype"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.svg#HelveticaNeue") format("svg"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.ttf") format("truetype"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.woff") format("woff"); }
 
+p {
+  margin-bottom: 0.5rem; }
+
 a {
   text-decoration: none; }
 
@@ -270,7 +273,7 @@ body {
 main {
   display: block;
   overflow-x: hidden;
-  margin-top: 56px; }
+  margin-top: 2rem; }
 
 section {
   width: 100%;
@@ -284,6 +287,19 @@ section {
   background: repeat-x top left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='rgb(17, 17, 17)' x='0' y='0' width='1' height='0.5'/></svg>");
   margin-top: 26px;
   margin-bottom: 26px; }
+
+header.row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem; }
+
+nav {
+  display: flex;
+  align-items: center; }
+  nav ul {
+    display: flex; }
+  nav li {
+    margin-left: .5rem; }
 
 .page-404 {
   overflow: visible; }
