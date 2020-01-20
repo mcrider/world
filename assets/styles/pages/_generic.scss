@@ -1,26 +1,2 @@
 .page-generic {
-  .contents {
-    margin-bottom: 50px;
-  }
-
-  p {
-    margin-bottom: 20px;
-    max-width: 800px;
-  }
-
-  strong {
-    font-weight: 700;
-  }
-
-  h2 {
-    margin: 10px 0 15px 0;
-    font-size: 24px;
-    line-height: 24px;
-
-    @include grid-media($grid-medium) {
-      margin: 15px 0 20px 0;
-      font-size: 36px;
-      line-height: 36px;
-    }
-  }
 }

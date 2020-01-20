@@ -1,5 +1,5 @@
 body {
-  background-color: $white;
+  background-color: $c-white;
   max-width: 100vw;
   overflow-x: hidden;
   font-size: $base-font-size;
@@ -7,12 +7,6 @@ body {
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-
-  &.no-scroll .outer-container {
-    height: 100vh;
-    overflow: hidden;
-  }
 }
 
 main {
@@ -20,68 +14,18 @@ main {
   // max-width: 100vw;
   overflow-x: hidden;
   margin-top: $header-height;
-
-  @include grid-media($grid-medium) {
-    margin-top: 36px
-  }
-
-  @include grid-media($grid-large) {
-    margin-top: $header-height-large;
-  }
-}
-
-:focus {
-  outline:none;
-}
-::-moz-focus-inner {
-  border:0;
 }
 
 section {
   width: 100%;
   margin-bottom: 30px;
 
-  @include grid-media($grid-medium) {
+  @media all and (min-width: #{$screen-md-min}) {
     margin-bottom: 54px;
   }
 }
 
-.main-container {
-  position: relative;
-  transition: transform $default-transition-speed $default-transition-easing;
-}
-
-.container {
-  @include grid-container;
-  max-width: $screen-lg-min;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start; // stretch for equal heights
-  align-content: center;
-  box-sizing: border-box;
-
-  // @include grid-visual;
-  // @include grid-media($grid-medium) {
-  //   @include grid-visual(null, $grid-medium);
-  // }
-  // @include grid-media($grid-large) {
-  //   @include grid-visual(null, $grid-large);
-  // }
-}
-
-.contents {
-  @include gridWidths(6, 12, 12);
-
-  &.left, &.right {
-    @include gridWidths(3, 6, 6);
-  }
-}
-
 .separator {
-  @include gridWidths(6, 12, 12);
-  // border-top: 1px solid $black;
   height: 1px;
   background: repeat-x top left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='rgb(17, 17, 17)' x='0' y='0' width='1' height='0.5'/></svg>");
   margin-top: 26px;

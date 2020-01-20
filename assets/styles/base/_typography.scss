@@ -1,370 +1,127 @@
-// Define all type styles as classes that can be extended by any heading level
-
 //
-// Body copy font styles
+// Type defaults
 //
-.fs-p-00 {
-  font: 400 16px/25px $helvetica;
-  letter-spacing: .35px;
-  font-variant-numeric: slashed-zero;
-
-  @include grid-media($grid-medium) {
-    font: 400 18px/26px $helvetica;
-    letter-spacing: .22px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 20px/29px $helvetica;
-    letter-spacing: .2px;
-  }
-}
-
-// Larger body text for contact meta
-.fs-p-01 {
-  font: 400 25px/30px $helvetica;
-  letter-spacing: .2px;
-
-  @include grid-media($grid-medium) {
-    font: 400 25px/30px $helvetica;
-    letter-spacing: .38px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 30px/35px $helvetica;
-    letter-spacing: .45px;
-  }
-}
-
-
-//
-// Heading font styles
-//
-.fs-h-00 {
-  font: 400 16px/22px $helvetica;
-  letter-spacing: .35px;
-
-  @include grid-media($grid-medium) {
-    font: 400 18px/22px $helvetica;
-    letter-spacing: .34px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 20px/25px $helvetica;
-    letter-spacing: .3px;
-  }
-}
-
-.fs-h-01 {
-  font: 400 25px/30px $helvetica;
-  letter-spacing: .2px;
-
-  @include grid-media($grid-medium) {
-    font: 400 40px/45px $helvetica;
-    letter-spacing: .32px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 60px/65px $helvetica;
-    letter-spacing: .3px;
-  }
-}
-
-.fs-h-02 {
-  font: 400 16px/22px $helvetica;
-  letter-spacing: .35px;
-
-  @include grid-media($grid-medium) {
-    font: 400 16px/22px $helvetica;
-    letter-spacing: .24px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 20px/26px $helvetica;
-    letter-spacing: .3px;
-  }
-}
-
-// Home page header text
-.fs-h-03 {
-  font: 400 12.5px/18px $helvetica;
-  letter-spacing: .2px;
-
-  @include grid-media($grid-medium) {
-    font: 400 14px/21px $helvetica;
-    letter-spacing: .22px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 15px/20px $helvetica;
-    letter-spacing: .35px;
-  }
-}
-
-// Case study intro
-.fs-h-04 {
-  font: 400 18px/22px $helvetica;
-  letter-spacing: .25px;
-
-  @include grid-media($grid-medium) {
-    font: 400 22px/22px $helvetica;
-    letter-spacing: .41px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 30px/30px $helvetica;
-    letter-spacing: .45px;
-  }
-}
-
-// Case study intro sub
-.fs-h-05 {
-  font: 400 35px/40px $helvetica;
-  letter-spacing: .1px;
-
-  @include grid-media($grid-medium) {
-    font: 400 50px/55px $helvetica;
-    letter-spacing: .4px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 75px/85px $helvetica;
-    letter-spacing: -.25px;
-  }
-}
-
-// Case study caption heading
-.fs-h-06 {
-  font: 400 16px/22px $helvetica;
-  letter-spacing: .5px;
-
-  @include grid-media($grid-large) {
-    font: 400 20px/25px $helvetica;
-    letter-spacing: .3px;
-  }
-}
-
-// Case study caption heading - large
-.fs-h-07 {
-  font: 400 25px/30px $helvetica;
-  letter-spacing: .5px;
-
-  @include grid-media($grid-large) {
-    font: 400 32px/34px $helvetica;
-    letter-spacing: .3px;
-  }
-}
-
-// Quote sizes
-.fs-h-08 {
-  font: 400 30px/35px $helvetica;
-  letter-spacing: .5px;
-
-  @include grid-media($grid-large) {
-    font: 400 45px/50px $helvetica;
-    letter-spacing: .3px;
-  }
-}
-
-.fs-h-09 {
-  font: 400 40px/45px $helvetica;
-  letter-spacing: .5px;
-
-  @include grid-media($grid-large) {
-    font: 400 60px/65px $helvetica;
-    letter-spacing: .3px;
-  }
-}
-
-.fs-h-10 {
-  font: 400 60px/65px $helvetica;
-  letter-spacing: .5px;
-
-  @include grid-media($grid-large) {
-    font: 400 100px/105px $helvetica;
-    letter-spacing: .3px;
-  }
-}
-
-
-// Super large for page hero headings
-.fs-h-11 {
-  font: 400 60px/60px $helvetica;
-  letter-spacing: -0.62px;
-  text-transform: uppercase;
-
-  @include grid-media($grid-medium) {
-    font: 400 120px/105px $helvetica;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 200px/180px $helvetica;
-    letter-spacing: -.5px;
-  }
-}
-
-// Principles list
-.fs-h-12 {
-  font: 400 25px/30px $helvetica;
-  letter-spacing: .5px;
-
-  @include grid-media($grid-medium) {
-    font: 400 25px/30px $helvetica;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 30px/36px $helvetica;
-  }
-}
-
-// News post single heading
-.fs-h-13 {
-  font: 400 35px/40px $helvetica;
-  letter-spacing: .1px;
-
-  @include grid-media($grid-medium) {
-    font: 400 40px/45px $helvetica;
-    letter-spacing: 0;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 75px/85px $helvetica;
-    letter-spacing: 0;
-  }
-}
-
-// Contact page job posting
-.fs-h-14 {
-  font: 400 25px/30px $helvetica;
-  letter-spacing: .5px;
-
-  @include grid-media($grid-large) {
-    font: 400 40px/44px $helvetica;
-    letter-spacing: 1px;
-  }
-}
-
-// Case study CTA overlay
-.fs-h-15 {
-  font: 400 35px/35px $helvetica;
-  letter-spacing: -.25px;
-
-  @include grid-media($grid-medium) {
-    font: 400 75px/75px $helvetica;
-    letter-spacing: 0;
-  }
-}
-
-// Case study CTA heading
-.fs-h-16 {
-  font: 400 20px/25px $helvetica;
-  letter-spacing: .2px;
-
-  @include grid-media($grid-medium) {
-    font: 400 35px/40px $helvetica;
-    letter-spacing: 0;
-  }
-}
-
-// Home page intro text
-.fs-h-17 {
-  font: 400 35px/35px $helvetica;
-  text-transform: uppercase;
-
-  @include grid-media($grid-medium) {
-    font: 400 100px/95px $helvetica;
-    letter-spacing: 0;
-  }
-}
-
-// Caption large heading
-.fs-h-17 {
-  font: 400 25px/30px $helvetica;
-  letter-spacing: .5px;
-
-  @include grid-media($grid-large) {
-    font: 400 40px/44px $helvetica;
-    letter-spacing: 0;
-  }
-}
-
-//
-// Microcopy font styles
-//
-.fs-sm-00 {
-  font: 400 12px/16px $helvetica;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-}
-
-// Caption body
-.fs-sm-01 {
-  font: 400 12px/18px $helvetica;
-  letter-spacing: .2px;
-
-  @include grid-media($grid-medium) {
-    font: 400 14px/19px $helvetica;
-    letter-spacing: .23px;
-  }
-
-  @include grid-media($grid-large) {
-    font: 400 15px/20px $helvetica;
-    letter-spacing: .35px;
-  }
-}
-
-
-// Set site-wide defaults
-body {
-  color: $black;
-  @extend .fs-p-00;
-}
-
-.logo-container {
-  font: 400 16px/23px $helvetica;
-  letter-spacing: 0;
-
-  @include grid-media($grid-medium) {
-    font: 400 20px/20px $helvetica;
-  }
-}
-
-// Set defaults for all text elements
-// (header elements are pretty page-specific, so mostly define most elsewhere)
-h2 {
-  @extend .fs-h-00;
-}
-
-h3 {
-  @extend .fs-h-01;
-}
-
 p {
-  @extend .fs-p-00;
-  margin-bottom: 1em;
+  @extend .type-paragraph;
 }
 
 a {
   text-decoration: none;
-  color: $black;
 }
 
-.underline, p a, footer a, .read-more a, .cta-link, ul.social a, .copy-link {
-  border-bottom: 1px solid transparent;
-  // transition: border-color .1s linear;
+p a {
+  @extend .type-link;
+}
 
-  &:hover {
-    @include grid-media($grid-medium) {
-      border-bottom: 1px solid !important;
-    }
+a.block-link {
+  @extend .type-link;
+
+  font-weight: 700;
+}
+
+h1 {
+  @extend .type-title;
+}
+
+h2 {
+  @extend .type-heading;
+}
+
+h3 {
+  @extend .type-subheading;
+}
+
+//
+// Various typographic styles that can be @extend'ed by your CSS or included directly in in your markup
+//
+
+// Used for feature title
+.type-title {
+  font: 700 2rem/2.5rem $base-font-family;
+
+  @media all and (min-width: #{$screen-lg-min}) {
+    font: 700 3.75rem/4.25rem $base-font-family;
+    letter-spacing: -0.1rem;
   }
 }
 
+// Used for article dek
+.type-dek {
+  font: 600 1rem/1.5rem $base-font-family;
 
-small {
-  @extend .fs-sm-00;
+  @media all and (min-width: #{$screen-md-min}) {
+    font: 600 1.5rem/2rem $base-font-family;
+  }
 }
 
-label {
-  @extend .fs-p-00;
-  display: block;
+// Used for content headings
+.type-heading {
+  font: 700 1.5rem/2rem $base-font-family;
+}
+
+// Used for content subheadings
+.type-subheading {
+  font: 700 1.25rem/1.75rem $base-font-family;
+}
+
+// Used for e.g. footer column headings
+.type-tinyheading {
+  font: 700 0.875rem/1.25rem $base-font-family;
+  letter-spacing: 0.008125rem;
+}
+
+// Used for body copy
+.type-paragraph {
+  font: 400 1rem/1.375rem $base-font-family;
+}
+
+// Used for article bylines
+.type-byline {
+  font: 400 0.875rem/1.25rem $base-font-family;
+
+  strong, .author {
+    font-weight: 700;
+  }
+}
+
+// Used for text labels in buttons, forms and other UI components
+.type-label {
+  font: 600 0.875rem/1.125rem $base-font-family;
+}
+
+// Used for photo captions and UI components
+.type-caption {
+  font: 400 0.875rem/1.25rem $base-font-family;
+}
+
+// Used for overlines
+.type-overline {
+  font: 700 0.75rem/1rem $base-font-family;
+}
+
+// Used for data in charts, graphs, and data viz's
+.type-data {
+  font: 400 0.75rem/1rem $base-font-family;
+}
+
+// Generic link styling
+.type-link {
+  @extend .type-paragraph;
+
+  color: $c-action-blue;
+  text-decoration: none;
+  border-bottom: 1px solid $c-action-blue;
+  transition: background-color 0.25s linear;
+
+  &:hover {
+    background-color: rgba($c-neutral-01, 0.04);
+  }
+
+  &:active {
+    background-color: rgba($c-neutral-01, 0.08);
+  }
+
+  &:visited {
+    border-bottom: $c-neutral-07;
+  }
 }

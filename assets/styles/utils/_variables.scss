@@ -1,53 +1,35 @@
-// Font Stacks -- Fonts come from typography.com external CSS
-// $chronicle-display: "Chronicle Display A", verdana, serif;
-// $chronicle-screensmart: "Chronicle SSm A", arial, sans-serif;
-$helvetica: "HelveticaNeue", helvetica, arial, sans-serif;
-// $helvetica: "Neue Helvetica Pro 55 Roman", helvetica, arial, sans-serif;
+/* Base Font */
+$base-font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+$base-font-weight: normal;
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-font-color: $c-primary;
 
-// Font Sizes
-$base-font-size: 18px;
+/* Base sizes */
+$screen-md-min: 600px;
+$screen-lg-min: 840px;
 
-// Screen sizes
-$screen-sm-min: 480px;
-$screen-md-min: 768px;
-$screen-lg-break: 1200px;
-$screen-lg-min: 1440px; // Grid width
+$grid-gutter: $base-font-size;
+$grid-gutter-md: 1rem;
+$grid-gutter-lg: 1.5rem;
+$grid-max-width: 1280px;
 
+$base-padding: $grid-gutter;
+$base-padding-md: $grid-gutter-md;
+$base-padding-lg: $grid-gutter-lg;
+$base-border-radius: 4px;
+$base-border-radius-lg: 8px;
 
-// Other sizes
-$base-padding: 18px;
-$base-padding-medium: 24px;
-$base-padding-large: 32px;
-$header-height: 52px;
-$header-height-large: 90px;
-$module-margin-bottom: 36px;
-$module-margin-bottom-large: 64px;
-$column: (100% / 6);
-$column-large: (100% / 12);
+/* Component sizes */
+$header-height: 56px;
+$header-height-lg: 56px;
 
-// Padding from top of page to content
-$padding-top-about: 74px; // Same for news, contact
-$padding-top-about-large: 189px;
-$padding-top-people: 74px;
-$padding-top-people-large: 208px;
-$padding-top-news: 45px;
-$padding-top-news-large: 71px;
-
-
-// Colors
-$grey-1: #C8C8C8;
-$grey-2: #BFBFBF;
-$grey-3: #111111;
-$grey-4: #666666;
-$grey-5: #999999;
-$white: #ffffff;
-$black: $grey-3;
-$yellow-1: #F8DE1C;
-$blue-1: #1E4DB7;
-$red-1: #ff0000;
-$error-red: #FF6461;
-
-
-// Transitions
-$default-transition-speed: .3s;
+/* Transition/animation settings */
+$default-transition-speed: 0.25s;
 $default-transition-easing: ease-in;
+
+/* Elevation styles for box shadows */
+$elevation-z02: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+$elevation-z04: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+$elevation-z06: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+$elevation-z08: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);

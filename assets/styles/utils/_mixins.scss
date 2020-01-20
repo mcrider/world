@@ -85,15 +85,3 @@
 		border-top: $width / 2 solid $color;
 	}
 }
-
-@mixin gridWidths($small: 6, $medium: 12, $large: 12) {
-	@include grid-column($small);
-
-	@include grid-media($grid-medium) {
-		@include grid-column($medium);
-	}
-
-	@include grid-media($grid-large) {
-		@include grid-column($large);
-	}
-}

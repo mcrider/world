@@ -68,7 +68,7 @@ register_post_type('background', $args);
  */
 // Set UI labels for Custom Post Type
 $labels = [
-  'name'               => 'Character',
+  'name'               => 'Characters',
   'singular_name'      => 'Character Entry',
   'menu_name'          => 'Characters',
   'parent_item_colon'  => 'Parent Entry',
@@ -131,7 +131,7 @@ register_post_type('character', $args);
  */
 // Set UI labels for Custom Post Type
 $labels = [
-  'name'               => 'Story',
+  'name'               => 'Stories',
   'singular_name'      => 'Story Entry',
   'menu_name'          => 'Stories',
   'parent_item_colon'  => 'Parent Entry',

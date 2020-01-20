@@ -13,7 +13,7 @@
 }
 
 .hide-medium {
-  @include grid-media($grid-medium) {
+  @media all and (min-width: #{$screen-md-min}) {
     display: none !important;
   }
 }
@@ -21,7 +21,7 @@
 .hide-small {
   display: none !important;
 
-  @include grid-media($grid-medium) {
+  @media all and (min-width: #{$screen-md-min}) {
     display: block !important;
   }
 }
@@ -31,7 +31,7 @@
 }
 
 .grey {
-  color: $grey-1;
+  color: $c-neutral-06;
 }
 
 .bg-image {
@@ -42,7 +42,7 @@
 
 .button {
   border-radius: 0;
-  border: 1px solid $white;
+  border: 1px solid $c-white;
   padding: 10px 12px 7px 12px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -77,5 +77,23 @@ img.lazy:not([src]) {
 
   .first-loaded & {
     opacity: 1;
+  }
+}
+
+.skip-link {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+
+  &:focus {
+    background: #fff;
+    color:#0550c8;
+    height: auto;
+    left: 0;
+    padding-left: 1rem;
+    width: 100%;
+    z-index: 99999;
   }
 }

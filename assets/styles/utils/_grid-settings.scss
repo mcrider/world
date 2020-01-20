@@ -1,22 +1,125 @@
-$neat-grid: (
-  columns: 6,
-  gutter: $base-padding
-);
+/*
+ * These mixins allow you to use CSS grid with functional fallbacks for IE11
+ * IE11 Supports basic grid layouts, but its all janky.
+ */
 
-$grid-small: (
-  columns: 6,
-  gutter: $base-padding,
-  media: "(min-width: #{$screen-sm-min})"
-);
+// By default, we ship with four breakpoints, each with a different number of columns (4/8/12 respectively)
+@mixin grid-parent () {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: $grid-gutter;
 
-$grid-medium: (
-  columns: 12,
-  gutter: $base-padding-medium,
-  media: "(min-width: #{$screen-md-min})"
-);
+  @media all and (min-width: #{$screen-md-min}) {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: $grid-gutter-md;
+  }
 
-$grid-large: (
-  columns: 12,
-  gutter: $base-padding-large,
-  media: "(min-width: #{$screen-lg-break})"
-);
+  @media all and (min-width: #{$screen-lg-min}) {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: $grid-gutter-lg;
+  }
+}
+
+// Define a grid child's starting position and number of columns to span
+@mixin grid-child ($col-start, $col-end) {
+  -ms-grid-column: #{$col-start};
+  -ms-grid-column-span: $col-end;
+  grid-column: #{$col-start} / span #{$col-end};
+}
+
+// Convenience function for grid-child(), but for each breakpoint
+@mixin grid-child-responsive ($col-start, $col-end, $col-start-md, $col-end-md, $col-start-lg, $col-end-lg) {
+  @include grid-child($col-start, $col-end);
+
+  @media all and (min-width: #{$screen-md-min}) {
+    @include grid-child($col-start-md, $col-end-md);
+  }
+
+  @media all and (min-width: #{$screen-lg-min}) {
+    @include grid-child($col-start-lg, $col-end-lg);
+  }
+}
+
+// Set up a grid to automatically slot its children in one after another; This is handy
+// e.g. for a two-dimensonal grid (children will wrap to next row automatically)
+@mixin grid-parent-auto () {
+  display: flex;
+  flex-flow: row wrap;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: $grid-gutter;
+
+    @media all and (min-width: #{$screen-md-min}) {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-gap: $grid-gutter-md;
+    }
+
+    @media all and (min-width: #{$screen-lg-min}) {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-gap: $grid-gutter-lg;
+    }
+  }
+}
+
+// Choose the size for a child in an 'auto grid'
+@mixin grid-child-auto ($col-width: 1) {
+  // FIXME: Could use nth-child to set margin of last column to 0
+  width: calc(#{percentage($col-width / 12)} - #{$grid-gutter / 2});
+  margin-right: $grid-gutter / 2;
+
+  @supports (display: grid) {
+    width: 100%;
+    grid-column: auto / span #{$col-width};
+  }
+}
+
+// Convenience function for grid-child(), but for each breakpoint
+@mixin grid-child-auto-responsive ($columns: 2, $columns-md: 4, $columns-lg: 3, $columns-xl: 3) {
+  @include grid-child-auto($columns);
+
+  @media all and (min-width: #{$screen-md-min}) {
+    @include grid-child-auto($columns-md);
+  }
+
+  @media all and (min-width: #{$screen-lg-min}) {
+    @include grid-child-auto($columns-lg);
+  }
+
+  @if ($columns-xl) {
+    @media all and (min-width: #{$grid-max-width}) {
+      @include grid-child-auto($columns-xl);
+    }
+  }
+}
+
+/* Convenience classes for setting up grid contexts */
+.row {
+  max-width: $grid-max-width;
+  padding: 0 $base-padding;
+
+  @media all and (min-width: #{$screen-md-min}) {
+    padding: 0 $base-padding-md;
+  }
+
+  @media all and (min-width: #{$screen-lg-min}) {
+    padding: 0 $base-padding-lg;
+  }
+
+  @media all and (min-width: #{$grid-max-width + ($base-padding * 2)}) {
+    margin: 0 auto;
+  }
+}
+
+.grid-parent {
+  @include grid-parent;
+}
+
+.grid-parent-auto {
+  @include grid-parent-auto;
+}
