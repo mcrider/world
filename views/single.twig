@@ -4,11 +4,11 @@
 	<article class="post-type-{{ post.post_type }} row" id="post-{{ post.ID }}">
 		<img src="{{ post.thumbnail.src|resize(1200, 300) }}">
 		<section class="article-content">
-			<h1 class="article-h1">{{ post.title }}</h1>
-			<a href="{{ post.link }}">{{ _e('edit') }}</a>
+			<h2>{{ post.title }}</h2>
+			{# <a href="{{ post.link }}">{{ _e('edit') }}</a>
 			<p class="blog-author">
 				<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> <time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
-			</p>
+			</p> #}
 			<div class="article-body">
 				{{post.content}}
 			</div>

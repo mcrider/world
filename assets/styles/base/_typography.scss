@@ -3,16 +3,18 @@
 //
 p {
   @extend .type-paragraph;
-
-  margin-bottom: 0.5rem;
 }
 
 a {
   text-decoration: none;
+  color: $c-neutral-02;
 }
 
 p a {
   @extend .type-link;
+
+  text-decoration: underline;
+  text-underline-offset: 0.1rem;
 }
 
 a.block-link {
@@ -39,12 +41,9 @@ h3 {
 
 // Used for feature title
 .type-title {
-  font: 700 2rem/2.5rem $base-font-family;
-
-  @media all and (min-width: #{$screen-lg-min}) {
-    font: 700 3.75rem/4.25rem $base-font-family;
-    letter-spacing: -0.1rem;
-  }
+  font: 600 2rem/2rem $header-font-family;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
 }
 
 // Used for article dek
@@ -58,32 +57,36 @@ h3 {
 
 // Used for content headings
 .type-heading {
-  font: 700 1.5rem/2rem $base-font-family;
+  font: 600 2rem/2.5rem $header-font-family;
+  margin-bottom: 0.5rem;
+
+  @media all and (min-width: #{$screen-lg-min}) {
+    font: 600 3.75rem/4.25rem $header-font-family;
+    letter-spacing: -0.1rem;
+  }
 }
 
 // Used for content subheadings
 .type-subheading {
-  font: 700 1.25rem/1.75rem $base-font-family;
+  font: 700 1.25rem/1.75rem $header-font-family;
 }
 
 // Used for e.g. footer column headings
 .type-tinyheading {
-  font: 700 0.875rem/1.25rem $base-font-family;
+  font: 700 0.875rem/1.25rem $header-font-family;
   letter-spacing: 0.008125rem;
 }
 
 // Used for body copy
 .type-paragraph {
-  font: 400 1rem/1.375rem $base-font-family;
-}
+  font: 400 1.25rem/1.75rem $base-font-family;
+  margin-bottom: 0.75rem;
 
-// Used for article bylines
-.type-byline {
-  font: 400 0.875rem/1.25rem $base-font-family;
-
-  strong, .author {
-    font-weight: 700;
+  @media all and (min-width: #{$screen-md-min}) {
+    font: 400 1.5rem/2rem $base-font-family;
+    margin-bottom: 0.75rem;
   }
+
 }
 
 // Used for text labels in buttons, forms and other UI components
@@ -97,13 +100,8 @@ h3 {
 }
 
 // Used for overlines
-.type-overline {
-  font: 700 0.75rem/1rem $base-font-family;
-}
-
-// Used for data in charts, graphs, and data viz's
-.type-data {
-  font: 400 0.75rem/1rem $base-font-family;
+.type-fine-print {
+  font: 600 0.75rem/1rem $base-font-family;
 }
 
 // Generic link styling

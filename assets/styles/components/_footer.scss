@@ -1,2 +1,7 @@
 footer {
+  padding: 100px 0 10px 0;
+
+  p {
+    @extend .type-fine-print;
+  }
 }

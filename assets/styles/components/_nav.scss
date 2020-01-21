@@ -7,6 +7,10 @@ nav {
   }
 
   li {
-    margin-left: .5rem;
+    margin-left: 1rem;
+  }
+
+  a {
+    font: 600 1rem/1 $header-font-family;
   }
 }

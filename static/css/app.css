@@ -178,75 +178,59 @@ img.lazy:not([src]) {
     width: 100%;
     z-index: 99999; }
 
-@font-face {
-  font-family: "HelveticaNeue";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Roman.woff2") format("woff2"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Roman.woff") format("woff"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Roman.eot?") format("eot"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Roman.otf") format("opentype"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Roman.svg#HelveticaNeue") format("svg"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Roman.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "HelveticaNeue";
-  font-style: normal;
-  font-weight: 600;
-  src: url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Bd.eot?") format("eot"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Bd.otf") format("opentype"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Bd.ttf") format("truetype"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Bd.woff") format("woff"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Bd.woff2") format("woff2"); }
-
-@font-face {
-  font-family: "HelveticaNeue";
-  font-style: italic;
-  font-weight: 400;
-  src: url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.eot?") format("eot"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.otf") format("opentype"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.svg#HelveticaNeue") format("svg"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.ttf") format("truetype"), url("/wp-content/themes/world/static/fonts/HelveticaNeueLTStd-Italic.woff") format("woff"); }
-
-p {
-  margin-bottom: 0.5rem; }
-
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #323131; }
+
+p a {
+  text-decoration: underline;
+  text-underline-offset: 0.1rem; }
 
 a.block-link {
   font-weight: 700; }
 
 .type-title, h1 {
-  font: 700 2rem/2.5rem "Open Sans", Arial, Helvetica, sans-serif; }
-  @media all and (min-width: 840px) {
-    .type-title, h1 {
-      font: 700 3.75rem/4.25rem "Open Sans", Arial, Helvetica, sans-serif;
-      letter-spacing: -0.1rem; } }
+  font: 600 2rem/2rem "Oswald", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem; }
 
 .type-dek {
-  font: 600 1rem/1.5rem "Open Sans", Arial, Helvetica, sans-serif; }
+  font: 600 1rem/1.5rem "EB Garamond", serif; }
   @media all and (min-width: 600px) {
     .type-dek {
-      font: 600 1.5rem/2rem "Open Sans", Arial, Helvetica, sans-serif; } }
+      font: 600 1.5rem/2rem "EB Garamond", serif; } }
 
 .type-heading, h2 {
-  font: 700 1.5rem/2rem "Open Sans", Arial, Helvetica, sans-serif; }
+  font: 600 2rem/2.5rem "Oswald", Helvetica, sans-serif;
+  margin-bottom: 0.5rem; }
+  @media all and (min-width: 840px) {
+    .type-heading, h2 {
+      font: 600 3.75rem/4.25rem "Oswald", Helvetica, sans-serif;
+      letter-spacing: -0.1rem; } }
 
 .type-subheading, h3 {
-  font: 700 1.25rem/1.75rem "Open Sans", Arial, Helvetica, sans-serif; }
+  font: 700 1.25rem/1.75rem "Oswald", Helvetica, sans-serif; }
 
 .type-tinyheading {
-  font: 700 0.875rem/1.25rem "Open Sans", Arial, Helvetica, sans-serif;
+  font: 700 0.875rem/1.25rem "Oswald", Helvetica, sans-serif;
   letter-spacing: 0.008125rem; }
 
 .type-paragraph, p, .type-link, p a, a.block-link {
-  font: 400 1rem/1.375rem "Open Sans", Arial, Helvetica, sans-serif; }
-
-.type-byline {
-  font: 400 0.875rem/1.25rem "Open Sans", Arial, Helvetica, sans-serif; }
-  .type-byline strong, .type-byline .author {
-    font-weight: 700; }
+  font: 400 1.25rem/1.75rem "EB Garamond", serif;
+  margin-bottom: 0.75rem; }
+  @media all and (min-width: 600px) {
+    .type-paragraph, p, .type-link, p a, a.block-link {
+      font: 400 1.5rem/2rem "EB Garamond", serif;
+      margin-bottom: 0.75rem; } }
 
 .type-label {
-  font: 600 0.875rem/1.125rem "Open Sans", Arial, Helvetica, sans-serif; }
+  font: 600 0.875rem/1.125rem "EB Garamond", serif; }
 
 .type-caption {
-  font: 400 0.875rem/1.25rem "Open Sans", Arial, Helvetica, sans-serif; }
+  font: 400 0.875rem/1.25rem "EB Garamond", serif; }
 
-.type-overline {
-  font: 700 0.75rem/1rem "Open Sans", Arial, Helvetica, sans-serif; }
-
-.type-data {
-  font: 400 0.75rem/1rem "Open Sans", Arial, Helvetica, sans-serif; }
+.type-fine-print, footer p {
+  font: 600 0.75rem/1rem "EB Garamond", serif; }
 
 .type-link, p a, a.block-link {
   color: #1878b0;
@@ -261,7 +245,8 @@ a.block-link {
     border-bottom: #d6d7d8; }
 
 body {
-  background-color: #fff;
+  background-color: #f9f6f4;
+  color: #323131;
   max-width: 100vw;
   overflow-x: hidden;
   font-size: 16px;
@@ -282,11 +267,20 @@ section {
     section {
       margin-bottom: 54px; } }
 
+article h1, article h2, article p {
+  max-width: 590px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; }
+
 .separator {
   height: 1px;
   background: repeat-x top left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='rgb(17, 17, 17)' x='0' y='0' width='1' height='0.5'/></svg>");
   margin-top: 26px;
   margin-bottom: 26px; }
+
+footer {
+  padding: 100px 0 10px 0; }
 
 header.row {
   display: flex;
@@ -299,7 +293,9 @@ nav {
   nav ul {
     display: flex; }
   nav li {
-    margin-left: .5rem; }
+    margin-left: 1rem; }
+  nav a {
+    font: 600 1rem/1 "Oswald", Helvetica, sans-serif; }
 
 .page-404 {
   overflow: visible; }

@@ -1,5 +1,6 @@
 body {
-  background-color: $c-white;
+  background-color: $c-neutral-09;
+  color: $c-neutral-02;
   max-width: 100vw;
   overflow-x: hidden;
   font-size: $base-font-size;
@@ -22,6 +23,15 @@ section {
 
   @media all and (min-width: #{$screen-md-min}) {
     margin-bottom: 54px;
+  }
+}
+
+article {
+  h1, h2, p {
+    max-width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
   }
 }
 
