@@ -8,17 +8,17 @@
  * IE11 Supports basic grid layouts, but its all janky.
  */
 /* Convenience classes for setting up grid contexts */
-.row {
+.row, article {
   max-width: 1280px;
   padding: 0 16px; }
   @media all and (min-width: 600px) {
-    .row {
+    .row, article {
       padding: 0 1rem; } }
   @media all and (min-width: 840px) {
-    .row {
+    .row, article {
       padding: 0 1.5rem; } }
   @media all and (min-width: 1312px) {
-    .row {
+    .row, article {
       margin: 0 auto; } }
 
 .grid-parent {
@@ -189,6 +189,11 @@ p a {
 a.block-link {
   font-weight: 700; }
 
+h2 {
+  max-width: 590px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .type-title, h1 {
   font: 600 2rem/2rem "Oswald", Helvetica, sans-serif;
   text-transform: uppercase;
@@ -202,14 +207,15 @@ a.block-link {
 
 .type-heading, h2 {
   font: 600 2rem/2.5rem "Oswald", Helvetica, sans-serif;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 1.5rem; }
   @media all and (min-width: 840px) {
     .type-heading, h2 {
       font: 600 3.75rem/4.25rem "Oswald", Helvetica, sans-serif;
       letter-spacing: -0.1rem; } }
 
 .type-subheading, h3 {
-  font: 700 1.25rem/1.75rem "Oswald", Helvetica, sans-serif; }
+  font: 700 2rem/2.5rem "Oswald", Helvetica, sans-serif;
+  margin-bottom: 0.75rem; }
 
 .type-tinyheading {
   font: 700 0.875rem/1.25rem "Oswald", Helvetica, sans-serif;
@@ -267,11 +273,12 @@ section {
     section {
       margin-bottom: 54px; } }
 
-article h1, article h2, article p {
+article {
   max-width: 590px;
   margin-left: auto;
-  margin-right: auto;
-  text-align: justify; }
+  margin-right: auto; }
+  article p {
+    text-align: justify; }
 
 .separator {
   height: 1px;
@@ -280,7 +287,8 @@ article h1, article h2, article p {
   margin-bottom: 26px; }
 
 footer {
-  padding: 100px 0 10px 0; }
+  margin-top: 10rem;
+  margin-bottom: 1rem; }
 
 header.row {
   display: flex;
@@ -296,6 +304,15 @@ nav {
     margin-left: 1rem; }
   nav a {
     font: 600 1rem/1 "Oswald", Helvetica, sans-serif; }
+
+.tease {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #d6d7d8; }
+  .tease:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0; }
 
 .page-404 {
   overflow: visible; }

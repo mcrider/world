@@ -27,10 +27,13 @@ section {
 }
 
 article {
-  h1, h2, p {
-    max-width: 590px;
-    margin-left: auto;
-    margin-right: auto;
+  @extend .row;
+
+  max-width: $read-max-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
     text-align: justify;
   }
 }
