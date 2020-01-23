@@ -1,6 +1,6 @@
-footer {
-  margin-top: 10rem;
-  margin-bottom: 1rem;
+footer.row {
+  padding-top: 10rem;
+  padding-bottom: 1rem;
 
   p {
     @extend .type-fine-print;

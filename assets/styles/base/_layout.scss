@@ -27,11 +27,21 @@ section {
 }
 
 article {
-  @extend .row;
-
   max-width: $read-max-width;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 $base-padding;
+
+  @media all and (min-width: #{$screen-md-min}) {
+    margin: 0 $base-padding-md;
+  }
+
+  @media all and (min-width: #{$screen-lg-min}) {
+    margin: 0 $base-padding-lg;
+  }
+
+  @media all and (min-width: #{$read-max-width + ($base-padding * 2)}) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   p {
     text-align: justify;

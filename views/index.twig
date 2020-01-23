@@ -1,6 +1,22 @@
 {% extends "base.twig" %}
 
 {% block content %}
+	{# <nav>
+		<ul>
+			<li>
+				<a href="/background">Background</a>
+				<span class="separator">></span>
+			</li>
+			<li>
+				<select>
+				{% for category in categories %}
+					<option>{{category.name}}</option>
+				{% endfor %}
+				<select>
+			</li>
+		</ul>
+	</nav> #}
+
 	{% for post in posts %}
 		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 	{% endfor %}

@@ -8,17 +8,17 @@
  * IE11 Supports basic grid layouts, but its all janky.
  */
 /* Convenience classes for setting up grid contexts */
-.row, article {
+.row {
   max-width: 1280px;
   padding: 0 16px; }
   @media all and (min-width: 600px) {
-    .row, article {
+    .row {
       padding: 0 1rem; } }
   @media all and (min-width: 840px) {
-    .row, article {
+    .row {
       padding: 0 1.5rem; } }
   @media all and (min-width: 1312px) {
-    .row, article {
+    .row {
       margin: 0 auto; } }
 
 .grid-parent {
@@ -191,8 +191,10 @@ a.block-link {
 
 h2 {
   max-width: 590px;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 2rem auto 5rem auto; }
+  @media all and (min-width: 600px) {
+    h2 {
+      margin: 6rem auto 8rem auto; } }
 
 .type-title, h1 {
   font: 600 2rem/2rem "Oswald", Helvetica, sans-serif;
@@ -206,16 +208,18 @@ h2 {
       font: 600 1.5rem/2rem "EB Garamond", serif; } }
 
 .type-heading, h2 {
-  font: 600 2rem/2.5rem "Oswald", Helvetica, sans-serif;
-  margin-bottom: 1.5rem; }
+  font: 600 2rem/2.5rem "Oswald", Helvetica, sans-serif; }
   @media all and (min-width: 840px) {
     .type-heading, h2 {
       font: 600 3.75rem/4.25rem "Oswald", Helvetica, sans-serif;
       letter-spacing: -0.1rem; } }
 
 .type-subheading, h3 {
-  font: 700 2rem/2.5rem "Oswald", Helvetica, sans-serif;
+  font: 700 1.5rem/2rem "Oswald", Helvetica, sans-serif;
   margin-bottom: 0.75rem; }
+  @media all and (min-width: 600px) {
+    .type-subheading, h3 {
+      font: 700 2rem/2.5rem "Oswald", Helvetica, sans-serif; } }
 
 .type-tinyheading {
   font: 700 0.875rem/1.25rem "Oswald", Helvetica, sans-serif;
@@ -235,7 +239,7 @@ h2 {
 .type-caption {
   font: 400 0.875rem/1.25rem "EB Garamond", serif; }
 
-.type-fine-print, footer p {
+.type-fine-print, footer.row p {
   font: 600 0.75rem/1rem "EB Garamond", serif; }
 
 .type-link, p a, a.block-link {
@@ -275,8 +279,17 @@ section {
 
 article {
   max-width: 590px;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 0 16px; }
+  @media all and (min-width: 600px) {
+    article {
+      margin: 0 1rem; } }
+  @media all and (min-width: 840px) {
+    article {
+      margin: 0 1.5rem; } }
+  @media all and (min-width: 622px) {
+    article {
+      margin-left: auto;
+      margin-right: auto; } }
   article p {
     text-align: justify; }
 
@@ -286,12 +299,13 @@ article {
   margin-top: 26px;
   margin-bottom: 26px; }
 
-footer {
-  margin-top: 10rem;
-  margin-bottom: 1rem; }
+footer.row {
+  padding-top: 10rem;
+  padding-bottom: 1rem; }
 
 header.row {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   padding-top: 1rem; }
 
@@ -299,8 +313,9 @@ nav {
   display: flex;
   align-items: center; }
   nav ul {
-    display: flex; }
-  nav li {
+    display: flex;
+    margin-top: 6px; }
+  nav li:not(:first-child) {
     margin-left: 1rem; }
   nav a {
     font: 600 1rem/1 "Oswald", Helvetica, sans-serif; }

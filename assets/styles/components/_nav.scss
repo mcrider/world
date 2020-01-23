@@ -4,9 +4,10 @@ nav {
 
   ul {
     display: flex;
+    margin-top: 6px;
   }
 
-  li {
+  li:not(:first-child) {
     margin-left: 1rem;
   }
 
