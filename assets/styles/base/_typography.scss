@@ -35,11 +35,6 @@ h2 {
   @extend .type-heading;
 
   max-width: $read-max-width;
-  margin: 1rem auto 5rem auto;
-
-  @media all and (min-width: #{$screen-md-min}) {
-    margin: 1rem auto 8rem auto;
-  }
 }
 
 h3 {
