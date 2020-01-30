@@ -234,7 +234,7 @@ h2 {
 .type-label {
   font: 600 0.875rem/1.125rem "EB Garamond", serif; }
 
-.type-caption {
+.type-caption, .article-body ul li {
   font: 400 0.875rem/1.25rem "EB Garamond", serif; }
 
 .type-fine-print, footer.row p {
@@ -296,6 +296,9 @@ article {
   background: repeat-x top left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='rgb(17, 17, 17)' x='0' y='0' width='1' height='0.5'/></svg>");
   margin-top: 26px;
   margin-bottom: 26px; }
+
+.category .hero .row {
+  padding-top: 21px; }
 
 .breadcrumb a {
   line-height: 1.25rem;
@@ -379,3 +382,9 @@ nav {
 
 .page-404 {
   overflow: visible; }
+
+.article-body ul li {
+  list-style-type: square;
+  margin-left: 1rem; }
+  .article-body ul li:marker {
+    opacity: 0.5; }

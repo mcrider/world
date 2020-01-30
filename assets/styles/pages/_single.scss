@@ -1,0 +1,12 @@
+.article-body {
+  ul li {
+    @extend .type-caption;
+
+    list-style-type: square;
+    margin-left: 1rem;
+
+    &:marker {
+      opacity: 0.5;
+    }
+  }
+}
