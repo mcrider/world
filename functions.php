@@ -107,7 +107,7 @@ class StarterSite extends Timber\Site {
 	// Remove some sidebar menus
 	function remove_menu_pages() {
 		// remove_menu_page( 'index.php' );                  //Dashboard
-		remove_menu_page( 'edit.php' );                   //Posts
+		// remove_menu_page( 'edit.php' );                   //Posts
 		// remove_menu_page( 'upload.php' );                 //Media
 		// remove_menu_page( 'edit.php?post_type=page' );    //Pages
 		// remove_menu_page( 'edit-comments.php' );          //Comments
@@ -125,9 +125,42 @@ class StarterSite extends Timber\Site {
 	public function add_to_context( $context ) {
 		$context['categories'] = Timber::get_terms('category', [
 			'parent'        => 0,
-			'number'        => 10,
+			'number'        => 1000,
 			'hide_empty'    => false
 		]);
+
+		// $context['breadcrumb'] = get_the_ID();
+		// $context['breadcrumb'] = get_the_category(get_the_ID());
+		// $context['breadcrumb'] = get_the_category(get_the_ID())[0]->term_id;
+		$context['breadcrumb'] = get_category_parents(get_the_category(get_the_ID())[0]->term_id, true, '<span class="breadcrumb__separator">></span>');
+
+		$context['category_navigation'] = wp_list_categories(array(
+			'show_option_all'    => '',
+			'orderby'            => 'name',
+			'order'              => 'ASC',
+			'style'              => 'list',
+			'show_count'         => 0,
+			'hide_empty'         => 1,
+			'use_desc_for_title' => 1,
+			'child_of'           => 0,
+			'feed'               => '',
+			'feed_type'          => '',
+			'feed_image'         => '',
+			'exclude'            => '',
+			'exclude_tree'       => '',
+			'include'            => '',
+			'hierarchical'       => 1,
+			'title_li'           => 0,
+			'show_option_none'   => __( 'No categories' ),
+			'number'             => null,
+			'echo'               => 0,
+			'depth'              => 0,
+			'current_category'   => 0,
+			'pad_counts'         => 0,
+			'taxonomy'           => 'category',
+			'walker'             => null
+		));
+
 		$context['menu'] = new Timber\Menu('Header');
 		$context['site'] = $this;
 		return $context;

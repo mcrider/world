@@ -7,11 +7,54 @@ nav {
     margin-top: 6px;
   }
 
-  li:not(:first-child) {
+  li:not(:first-child), ul:not(:first-child) {
     margin-left: 1rem;
+  }
+
+  ul.categories {
+    > li {
+      position: relative;
+    }
+
+    > li > .children {
+      margin-left: 0;
+      display: none;
+      position: absolute;
+      top: 100%;
+      margin-top: 0;
+      padding-top: 0.25rem;
+
+      li {
+        margin-left: 0;
+        display: block;
+      }
+
+      .children {
+        flex-flow: column;
+        position: relative;
+        margin-top: 0;
+        margin-left: 0;
+        padding-left: 0.5rem;
+
+        &:after {
+          content: '';
+          position: absolute;
+          border-left: 1px solid rgba($c-neutral-02, 0.5);
+          top: 3px;
+          left: 0;
+          width: 1px;
+          height: calc(100% - 12px);
+        }
+      }
+    }
+
+    li:hover > .children, .children:hover {
+      display: block;
+    }
   }
 
   a {
     font: 600 1rem/1 $header-font-family;
+    white-space: nowrap;
   }
 }

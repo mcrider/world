@@ -8,6 +8,10 @@ p {
 a {
   text-decoration: none;
   color: $c-neutral-02;
+
+  &:hover {
+    border-bottom: 1px solid $c-neutral-02;
+  }
 }
 
 p a {
@@ -31,10 +35,10 @@ h2 {
   @extend .type-heading;
 
   max-width: $read-max-width;
-  margin: 2rem auto 5rem auto;
+  margin: 1rem auto 5rem auto;
 
   @media all and (min-width: #{$screen-md-min}) {
-    margin: 6rem auto 8rem auto;
+    margin: 1rem auto 8rem auto;
   }
 }
 

@@ -1,0 +1,22 @@
+.breadcrumb {
+  margin-top: 4rem;
+
+  a {
+    line-height: 1.25rem;
+    border-bottom: 1px solid transparent;
+
+    &:hover{
+      border-bottom: 1px solid $c-neutral-02;
+    }
+  }
+
+  &__separator {
+    margin: 0 0.5rem;
+    font: 400 0.75rem/1.25rem $header-font-family;
+    color: $c-neutral-05;
+
+    &:last-child {
+      display: none;
+    }
+  }
+}

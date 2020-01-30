@@ -181,6 +181,8 @@ img.lazy:not([src]) {
 a {
   text-decoration: none;
   color: #323131; }
+  a:hover {
+    border-bottom: 1px solid #323131; }
 
 p a {
   text-decoration: underline;
@@ -191,10 +193,10 @@ a.block-link {
 
 h2 {
   max-width: 590px;
-  margin: 2rem auto 5rem auto; }
+  margin: 1rem auto 5rem auto; }
   @media all and (min-width: 600px) {
     h2 {
-      margin: 6rem auto 8rem auto; } }
+      margin: 1rem auto 8rem auto; } }
 
 .type-title, h1 {
   font: 600 2rem/2rem "Oswald", Helvetica, sans-serif;
@@ -299,6 +301,20 @@ article {
   margin-top: 26px;
   margin-bottom: 26px; }
 
+.breadcrumb {
+  margin-top: 4rem; }
+  .breadcrumb a {
+    line-height: 1.25rem;
+    border-bottom: 1px solid transparent; }
+    .breadcrumb a:hover {
+      border-bottom: 1px solid #323131; }
+  .breadcrumb__separator {
+    margin: 0 0.5rem;
+    font: 400 0.75rem/1.25rem "Oswald", Helvetica, sans-serif;
+    color: #8c8d90; }
+    .breadcrumb__separator:last-child {
+      display: none; }
+
 footer.row {
   padding-top: 10rem;
   padding-bottom: 1rem; }
@@ -315,10 +331,39 @@ nav {
   nav ul {
     display: flex;
     margin-top: 6px; }
-  nav li:not(:first-child) {
+  nav li:not(:first-child), nav ul:not(:first-child) {
     margin-left: 1rem; }
+  nav ul.categories > li {
+    position: relative; }
+  nav ul.categories > li > .children {
+    margin-left: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: 0;
+    padding-top: 0.25rem; }
+    nav ul.categories > li > .children li {
+      margin-left: 0;
+      display: block; }
+    nav ul.categories > li > .children .children {
+      flex-flow: column;
+      position: relative;
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 0.5rem; }
+      nav ul.categories > li > .children .children:after {
+        content: '';
+        position: absolute;
+        border-left: 1px solid rgba(50, 49, 49, 0.5);
+        top: 3px;
+        left: 0;
+        width: 1px;
+        height: calc(100% - 12px); }
+  nav ul.categories li:hover > .children, nav ul.categories .children:hover {
+    display: block; }
   nav a {
-    font: 600 1rem/1 "Oswald", Helvetica, sans-serif; }
+    font: 600 1rem/1 "Oswald", Helvetica, sans-serif;
+    white-space: nowrap; }
 
 .tease {
   padding-bottom: 2rem;

@@ -15,6 +15,9 @@
 				</h1>
 				<nav id="nav-main" class="nav-main" role="navigation">
 					{% include "menu.twig" with {'items': menu.get_items} %}
+					<ul class="categories">
+						{{ category_navigation }}
+					</ul>
 				</nav><!-- #nav -->
 			{% endblock %}
 		</header>
