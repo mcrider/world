@@ -123,17 +123,15 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['categories'] = Timber::get_terms('category', [
-			'parent'        => 0,
-			'number'        => 1000,
-			'hide_empty'    => false
-		]);
+		global $post;
 
-		// $context['breadcrumb'] = get_the_ID();
-		// $context['breadcrumb'] = get_the_category(get_the_ID());
-		// $context['breadcrumb'] = get_the_category(get_the_ID())[0]->term_id;
-		$context['breadcrumb'] = get_category_parents(get_the_category(get_the_ID())[0]->term_id, true, '<span class="breadcrumb__separator">></span>');
+		// Breadcrumb for posts
+		$category = get_the_category(get_the_ID());
+		if ($category) {
+			$context['breadcrumb'] = get_category_parents($category[0]->term_id, true, '<span class="breadcrumb__separator">></span>');
+		}
 
+		// Category hiearchy for main menu
 		$context['category_navigation'] = wp_list_categories(array(
 			'show_option_all'    => '',
 			'orderby'            => 'name',
@@ -160,6 +158,25 @@ class StarterSite extends Timber\Site {
 			'taxonomy'           => 'category',
 			'walker'             => null
 		));
+
+		// $context['categories'] = Timber::get_terms('category', [
+		// 	'parent'        => 0,
+		// 	'number'        => 1000,
+		// 	'hide_empty'    => false
+		// ]);
+
+		// Get posts sorted by date for timeline
+		if ($post->post_name === 'timeline') {
+			$args = array(
+				'numberposts' => -1,
+				'post_type' => 'post',
+				'meta_key' => 'date',
+				'orderby' => 'meta_value',
+				// 'orderby' => 'date time',
+				'order' => 'ASC',
+			);
+			$context['timeline_posts'] = Timber::get_posts($args);
+		}
 
 		$context['menu'] = new Timber\Menu('Header');
 		$context['site'] = $this;

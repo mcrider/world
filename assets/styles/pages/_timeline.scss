@@ -1,0 +1,65 @@
+.page-timeline {
+  max-width: 1040px;
+
+  .timeline-entry {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin: 0 $grid-gutter;
+
+    @media all and (min-width: #{$screen-md-min}) {
+      flex-flow: row;
+
+      &:nth-child(odd) {
+        flex-flow: row-reverse;
+      }
+
+      &:nth-child(odd) .timeline-entry__tease h3 {
+        text-align: right;
+      }
+
+      &:nth-child(even) .timeline-entry__date p {
+        text-align: right;
+      }
+    }
+
+    &__tease, &__date {
+      @media all and (min-width: #{$screen-md-min}) {
+        width: 50%;
+      }
+    }
+
+    &__tease {
+      padding: 3rem 0;
+    }
+
+    &__divider {
+      display: none;
+      position: relative;
+      width: 1px;
+      margin: 0 1.5rem;
+      align-self: stretch;
+      border-right: 1px solid $c-neutral-05;
+
+      @media all and (min-width: #{$screen-md-min}) {
+        display: block;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 24px; width: 24px;
+        border-radius: 50%;
+        background-color: $c-neutral-05;
+      }
+    }
+
+    &__date p {
+      font: 400 1.4rem/2rem $header-font-family;
+      margin-bottom: 1px;
+    }
+  }
+}

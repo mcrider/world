@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="page-timeline">
+		<div class="hero">
+			<h2>{{post.title}}</h2>
+		</div>
+		<section class="article-body">
+			{# {{post.content}} #}
+			{% for post in timeline_posts %}
+				<div class="timeline-entry">
+					<div class="timeline-entry__date">
+						<p>{{post.meta('verb')}} {{post.meta('date')}}</p>
+					</div>
+					<div class="timeline-entry__divider"></div>
+					<div class="timeline-entry__tease">
+						<h3><a href="{{post.link}}">{{post.title}}</a></h3>
+						<p>{{post.preview.length(20)}}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</section>
+	</article>
+{% endblock %}
