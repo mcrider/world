@@ -10,7 +10,7 @@
 			{% for post in timeline_posts %}
 				<div class="timeline-entry">
 					<div class="timeline-entry__date">
-						<p>{{post.meta('verb')}} {{post.meta('date')}}</p>
+						<p>{{post.meta('verb')}} {{post.meta('date')|date('F j, Y')}}</p>
 					</div>
 					<div class="timeline-entry__divider"></div>
 					<div class="timeline-entry__tease">
