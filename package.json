@@ -30,7 +30,7 @@
     "file-loader": "^1.1",
     "font-awesome": "^4.7.0",
     "image-webpack-loader": "^3.4.2",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.13.1",
     "prettier-eslint": "^8.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
